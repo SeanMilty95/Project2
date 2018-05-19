@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Categories - View All</title>
+</head>
+    <body>
+        <h1>Categories</h1>
+
+        <table border="1">
+            <tr>
+                <th>Type</th>
+                <th>Color</th>
+            </tr>
+            <% for(var i = 0; i < categories.length; i++) { %>
+                <tr>
+                    <td><%= categories[i]._type %></td>
+                    <td><%= categories[i].color %></td>
+                </tr>
+            <% } %>
+        </table>
+
+    </body>
+</html>

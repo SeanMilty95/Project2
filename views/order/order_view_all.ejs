@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Orders - View All</title>
+</head>
+    <body>
+        <h1>Orders</h1>
+
+        <table border="1">
+            <tr>
+                <th>Order Number</th>
+                <th>Customer Id</th>
+                <th>Quantity</th>
+                <th>Address</th>
+            </tr>
+            <% for(var i = 0; i < orders.length; i++) { %>
+                <tr>
+                    <td><%= orders[i].order_num %></td>
+                    <td><%= orders[i].customer_id %></td>
+                    <td><%= orders[i].quantity %></td>
+                    <td><%= orders[i].address %></td>
+                </tr>
+            <% } %>
+        </table>
+
+    </body>
+</html>

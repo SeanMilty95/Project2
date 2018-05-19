@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Refers To - View All</title>
+</head>
+    <body>
+        <h1>Products In Order</h1>
+
+        <table border="1">
+            <tr>
+                <th>Relation Id</th>
+                <th>Order Number</th>
+                <th>Product Number</th>
+            </tr>
+            <% for(var i = 0; i < refersto.length; i++) { %>
+                <tr>
+                    <td><%= refersto[i].relate_id %></td>
+                    <td><%= refersto[i].order_num %></td>
+                    <td><%= refersto[i].product_num %></td>
+
+                </tr>
+            <% } %>
+        </table>
+
+    </body>
+</html>

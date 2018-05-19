@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Products - View All</title>
+</head>
+    <body>
+        <h1>Products</h1>
+
+        <table border="1">
+            <tr>
+                <th>Product Number</th>
+                <th>Product Name</th>
+                <th>Stock</th>
+                <th>Type</th>
+            </tr>
+            <% for(var i = 0; i < products.length; i++) { %>
+                <tr>
+                    <td><%= products[i].product_num %></td>
+                    <td><%= products[i].item_name %></td>
+                    <td><%= products[i].stock %></td>
+                    <td><%= products[i]._type %></td>
+                </tr>
+            <% } %>
+        </table>
+
+    </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>customer - View All</title>
+</head>
+    <body>
+        <h1>Customers</h1>
+
+        <table border="1">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>email</th>
+                <th>Phone Number</th>
+            </tr>
+            <% for(var i = 0; i < customers.length; i++) { %>
+                <tr>
+                    <td><%= customers[i].customer_id %></td>
+                    <td><%= customers[i]._name %></td>
+                    <td><%= customers[i].email %></td>
+                    <td><%= customers[i].phone_num %></td>
+                </tr>
+            <% } %>
+        </table>
+
+    </body>
+</html>
