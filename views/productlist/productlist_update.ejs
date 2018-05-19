@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Customer - Update</title>
+    </head>
+    <body>
+        <h1>Update Customer</h1>
+
+        <form action="/productlist/update" method="get">
+
+            Item Name:
+            <input
+             id="item_name"
+             name="item_name"
+             type="text"
+             value="<%= productlist.item_name %>"
+             />
+
+             In Stock:
+             <input
+              id="stock"
+              name="stock"
+              type="text"
+              value="<%= productlist.stock %>"
+              />
+
+              <input
+              type="hidden"
+              id="product_num"
+              name="product_num"
+              value="<%= productlist.product_num %>"
+              />
+            <br />
+            <input type="submit" />
+
+        </form>
+
+    </body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Customer - Update</title>
+    </head>
+    <body>
+        <h1>Update Customer</h1>
+
+        <form action="/customer/update" method="get">
+
+            name: <input
+                    id = "_name"
+                    name="_name"
+                    type="text"
+                    value="<%= customer._name%>"
+                    />
+
+            email: <input
+                    id = "email"
+                    name="email"
+                    type="text"
+                    value="<%= customer.email%>"
+            />
+
+            Phone Number:
+            <input
+             id="phone_num"
+             name="phone_num"
+             type="text"
+             value="<%= customer.phone_num %>"
+             />
+
+
+            <input type="hidden"
+                   id="customer_id"
+                   name ="customer_id"
+                   value="<%= customer.customer_id%>"
+            />
+
+            <br />
+            <input type="submit" />
+
+        </form>
+
+    </body>
+</html>

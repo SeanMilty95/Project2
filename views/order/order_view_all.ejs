@@ -19,7 +19,9 @@
                     <td><%= orders[i].customer_id %></td>
                     <td><%= orders[i].quantity %></td>
                     <td><%= orders[i].address %></td>
-                </tr>
+                    <td><a href="/order/edit/?order_num=<%= orders[i].order_num %>">
+                     edit </a></td>
+                 </tr>
             <% } %>
         </table>
 

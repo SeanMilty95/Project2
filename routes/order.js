@@ -42,4 +42,34 @@ router.get('/insert', function(req, res)
     })
 });
 
+router.get('/edit', function(req,res){
+    order_dal.getinfo(req.query.order_num, function (err, result) {
+        if(err) {res.send(err); }
+        else {
+            res.render('order/order_update',
+                {order: result[0][0], order_num: result[1], customer_id: result[2], quantity: result[3], address: result[4]}
+
+            );
+        }
+    });
+});
+
+router.get('/update', function(req, res)
+{
+    order_dal.UpdateCategory(req.query, function(err,result)
+    {
+        if(err)
+        {
+            console.log(err);
+            res.send(err);
+        }
+        else
+        {
+            res.redirect(302, '/order/all');
+        }
+    })
+
+});
+
+
 module.exports = router;

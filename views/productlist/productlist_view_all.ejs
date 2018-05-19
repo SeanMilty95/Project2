@@ -19,6 +19,11 @@
                     <td><%= products[i].item_name %></td>
                     <td><%= products[i].stock %></td>
                     <td><%= products[i]._type %></td>
+                    <td><a href="/productlist/edit/?product_num=<%= products[i].product_num %>">
+                    edit </a></td>
+                    <a href="/productlist/delete/?product_num=<%= products[i].product_num %>">
+                       delete</a>
+                     </td>
                 </tr>
             <% } %>
         </table>

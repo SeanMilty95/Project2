@@ -42,4 +42,45 @@ router.get('/insert', function(req, res)
     })
 });
 
+router.get('/edit', function(req,res){
+    customer_dal.getinfo(req.query.customer_id, function (err, result) {
+        if(err) {res.send(err); }
+        else {
+            res.render('customer/customer_update',
+                {customer: result[0][0], customer_id: result[1], _name: result[2], email: result[3], phone_num: result[4]}
+
+            );
+        }
+    });
+});
+
+router.get('/update', function(req, res)
+{
+    customer_dal.UpdateCategory(req.query, function(err,result)
+    {
+        if(err)
+        {
+            console.log(err);
+            res.send(err);
+        }
+        else
+        {
+            res.redirect(302, '/customer/all');
+        }
+    })
+
+});
+
+router.get('/delete', function (req, res) {
+    customer_dal.delete(req.query.customer_id, function (err,result) {
+        if(err){
+            console.log(err);
+            res.send(err)
+        }
+        else {
+            res.redirect(302, '/customer/all');
+        }
+    });
+});
+
 module.exports = router;

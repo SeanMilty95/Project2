@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Subqueries</title>
+</head>
+    <body>
+        <h1>Join Subquery</h1>
+        <p>Selects the product types with the color green</p>
+    <p>select _type from Product_List where _type In (select _type from categories where color = "green");</P>
+
+         <table border="1">
+         <tr>
+         <th>Product Type</th>
+         </tr>
+         <% for(var i = 0; i < IN.length; i++) { %>
+         <tr>
+         <td><%= IN[i]._type %></td>
+         </tr>
+         <% } %>
+         </table>
+    </body>
+</html>

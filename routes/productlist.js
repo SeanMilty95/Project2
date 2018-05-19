@@ -42,4 +42,46 @@ router.get('/insert', function(req, res)
     })
 });
 
+router.get('/edit', function(req,res){
+    productlist_dal.getinfo(req.query.product_num, function (err, result) {
+        if(err) {res.send(err); }
+        else {
+            res.render('productlist/productlist_update',
+                {productlist: result[0][0], product_num: result[1], _type: result[2], item_name: result[3], stock: result[4]}
+
+            );
+        }
+    });
+});
+
+router.get('/update', function(req, res)
+{
+    productlist_dal.UpdateCategory(req.query, function(err,result)
+    {
+        if(err)
+        {
+            console.log(err);
+            res.send(err);
+        }
+        else
+        {
+            res.redirect(302, '/productlist/all');
+        }
+    })
+});
+
+router.get('/delete', function (req, res) {
+    productlist_dal.delete(req.query.product_num, function (err,result) {
+        if(err){
+            console.log(err);
+            res.send(err)
+        }
+        else {
+            res.redirect(302, '/productlist/all');
+        }
+    });
+});
+
+
+
 module.exports = router;

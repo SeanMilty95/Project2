@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Categories - Update</title>
+    </head>
+    <body>
+        <h1>Update Category</h1>
+
+
+        <form action="/categories/update" method="get">
+
+
+            Color Change: <input
+                id = "color"
+                name="color"
+                type="text"
+                value="<%= categories.color %>"
+            />
+
+
+            <br />
+
+            <input
+            type="hidden"
+            id="_type"
+            name="_type"
+            value="<%= categories._type %>" />
+
+            <br />
+            <input type="submit" />
+
+        </form>
+    </body>
+</html>

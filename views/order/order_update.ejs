@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Customer - Update</title>
+    </head>
+    <body>
+        <h1>Update Customer</h1>
+
+        <form action="/order/update" method="get">
+
+
+
+             Quantity:
+             <input
+              id="quantity"
+              name="quantity"
+              type="text"
+              value="<%= order.quantity %>"
+              />
+
+              address
+              <input
+               id="address"
+               name="address"
+               type="text"
+               value="<%= order.address %>"
+               />
+
+                <input
+                type="hidden"
+                 id="order_num"
+                 name="order_num"
+                 value="<%= order.order_num %>"
+                 />
+
+            <br />
+            <input type="submit" />
+
+        </form>
+
+    </body>
+</html>

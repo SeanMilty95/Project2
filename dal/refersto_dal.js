@@ -5,7 +5,7 @@ var connection = mysql.createConnection(db.config);
 
 exports.getAll = function(callback)
 {
-    var query = 'SELECT * FROM refers_to;';
+    var query = 'SELECT * FROM refer_view;';
 
     connection.query(query, function(err, result)
     {

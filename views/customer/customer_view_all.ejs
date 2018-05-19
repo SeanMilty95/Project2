@@ -19,6 +19,12 @@
                     <td><%= customers[i]._name %></td>
                     <td><%= customers[i].email %></td>
                     <td><%= customers[i].phone_num %></td>
+                    <td><a href="/customer/edit/?customer_id=<%= customers[i].customer_id %>">
+                     edit </a></td>
+                     <td>
+                     <a href="/customer/delete/?customer_id=<%= customers[i].customer_id %>">
+                      delete</a>
+                     </td>
                 </tr>
             <% } %>
         </table>
